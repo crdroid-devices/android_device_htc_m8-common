@@ -37,18 +37,15 @@ TARGET_SPECIFIC_HEADER_PATH := device/htc/m8-common/include
 # Camera
 COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
 COMMON_GLOBAL_CFLAGS += -DPROPERTY_PERMS_APPEND='{"htc.camera.sensor.", AID_CAMERA, 0}, {"camera.4k2k.", AID_MEDIA, 0},'
+TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8974
 
 # SELinux
+include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/htc/m8-common/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    cir_fw_update.te \
-    file_contexts \
-    system_app.te
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8-common/releasetools
