@@ -213,14 +213,10 @@ lib/libloc_api_v02.so
 lib/libloc_core.so
 lib/libloc_ds_api.so
 lib/libloc_eng.so
-lib/libmdmdetect.so
 lib/hw/gps.default.so
-vendor/lib/hw/flp.default.so
-vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
-vendor/lib/libperipheral_client.so
 
 # HTC / Other
 -app/EasyAccessService/EasyAccessService.apk:app/EasyAccessService.apk
@@ -244,6 +240,7 @@ etc/firmware/hcheck.mdt
 etc/firmware/ILP0100_IPM_Code_out.bin
 etc/firmware/ILP0100_IPM_Data_out.bin
 etc/firmware/lscbuffer_rev2.bin
+vendor/firmware/libpn544_fw.so
 
 # IRDA
 -app/CIRModule/CIRModule.apk:app/CIRModule.apk
